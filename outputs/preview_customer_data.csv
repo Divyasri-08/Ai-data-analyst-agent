@@ -1,0 +1,11 @@
+"customer_id","customer_name","region","subscription_plan","monthly_charges","tenure_months","contract_type","payment_method","support_tickets","churn_status","churn_reason"
+"C001","Aarav Retail","East","Premium","89.99","24","Annual","Credit Card","1","No",NULL
+"C002","Green Mart","West","Basic","29.99","6","Month-to-Month","UPI","4","Yes","High price"
+"C003","Urban Store","South","Standard","59.99","14","Annual","Credit Card","2","No",NULL
+"C004","Metro Supplies","North","Premium","99.99","36","Two-Year","Bank Transfer","0","No",NULL
+"C005","Quick Shop","East","Basic","25.99","3","Month-to-Month","Debit Card","5","Yes","Poor support"
+"C006","Prime Buyers","West","Standard","54.99","12","Annual","Credit Card","1","No",NULL
+"C007","Style Hub","South","Basic","34.99","5","Month-to-Month","UPI","3","Yes","Low usage"
+"C008","Office World","North","Premium","94.99","28","Two-Year","Bank Transfer","1","No",NULL
+"C009","Tech Zone","East","Standard","64.99","18","Annual","Credit Card","2","No",NULL
+"C010","Daily Needs","West","Basic","27.99","2","Month-to-Month","Debit Card","6","Yes","Competitor offer"

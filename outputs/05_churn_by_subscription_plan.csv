@@ -1,0 +1,4 @@
+subscription_plan,total_customers,churned_customers,churn_rate_percentage
+Basic,17,17,100.0
+Standard,17,0,0.0
+Premium,16,0,0.0

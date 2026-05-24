@@ -1,0 +1,51 @@
+customer_id,customer_name,region,subscription_plan,monthly_charges,tenure_months,contract_type,payment_method,support_tickets,churn_status,churn_reason
+C001,Aarav Retail,East,Premium,89.99,24,Annual,Credit Card,1,No,
+C002,Green Mart,West,Basic,29.99,6,Month-to-Month,UPI,4,Yes,High price
+C003,Urban Store,South,Standard,59.99,14,Annual,Credit Card,2,No,
+C004,Metro Supplies,North,Premium,99.99,36,Two-Year,Bank Transfer,0,No,
+C005,Quick Shop,East,Basic,25.99,3,Month-to-Month,Debit Card,5,Yes,Poor support
+C006,Prime Buyers,West,Standard,54.99,12,Annual,Credit Card,1,No,
+C007,Style Hub,South,Basic,34.99,5,Month-to-Month,UPI,3,Yes,Low usage
+C008,Office World,North,Premium,94.99,28,Two-Year,Bank Transfer,1,No,
+C009,Tech Zone,East,Standard,64.99,18,Annual,Credit Card,2,No,
+C010,Daily Needs,West,Basic,27.99,2,Month-to-Month,Debit Card,6,Yes,Competitor offer
+C011,Smart Point,South,Premium,104.99,30,Two-Year,Credit Card,0,No,
+C012,Home Center,North,Standard,58.99,10,Annual,UPI,2,No,
+C013,ABC Retail,East,Basic,31.99,4,Month-to-Month,Debit Card,4,Yes,High price
+C014,Green Mart,West,Premium,92.99,22,Annual,Credit Card,1,No,
+C015,Urban Store,South,Standard,61.99,16,Annual,Bank Transfer,1,No,
+C016,Metro Supplies,North,Basic,28.99,7,Month-to-Month,UPI,3,Yes,Poor support
+C017,Quick Shop,East,Premium,109.99,34,Two-Year,Credit Card,0,No,
+C018,Prime Buyers,West,Standard,55.99,9,Annual,Debit Card,2,No,
+C019,Style Hub,South,Basic,33.99,1,Month-to-Month,UPI,7,Yes,Low usage
+C020,Office World,North,Premium,97.99,26,Two-Year,Bank Transfer,1,No,
+C021,Tech Zone,East,Standard,63.99,15,Annual,Credit Card,1,No,
+C022,Daily Needs,West,Basic,26.99,3,Month-to-Month,Debit Card,5,Yes,Competitor offer
+C023,Smart Point,South,Premium,101.99,32,Two-Year,Credit Card,0,No,
+C024,Home Center,North,Standard,57.99,11,Annual,UPI,2,No,
+C025,Bright Retail,East,Basic,30.99,6,Month-to-Month,Debit Card,4,Yes,High price
+C026,Value Mart,West,Standard,62.99,17,Annual,Credit Card,1,No,
+C027,City Stores,South,Premium,95.99,25,Two-Year,Bank Transfer,0,No,
+C028,North Supplies,North,Basic,29.99,2,Month-to-Month,UPI,6,Yes,Poor support
+C029,East Traders,East,Standard,60.99,13,Annual,Credit Card,2,No,
+C030,West Hub,West,Premium,98.99,29,Two-Year,Credit Card,1,No,
+C031,South Market,South,Basic,32.99,5,Month-to-Month,Debit Card,5,Yes,Low usage
+C032,North Retail,North,Standard,56.99,12,Annual,UPI,2,No,
+C033,Alpha Stores,East,Premium,103.99,31,Two-Year,Bank Transfer,0,No,
+C034,Beta Mart,West,Basic,27.99,4,Month-to-Month,Debit Card,4,Yes,High price
+C035,Gamma Retail,South,Standard,59.49,14,Annual,Credit Card,1,No,
+C036,Delta Supplies,North,Premium,100.99,27,Two-Year,Credit Card,1,No,
+C037,Eagle Shop,East,Basic,28.49,1,Month-to-Month,UPI,7,Yes,Competitor offer
+C038,Falcon Mart,West,Standard,64.49,19,Annual,Bank Transfer,2,No,
+C039,Galaxy Store,South,Premium,96.49,23,Two-Year,Credit Card,0,No,
+C040,Harbor Retail,North,Basic,31.49,6,Month-to-Month,Debit Card,3,Yes,Poor support
+C041,Indigo Mart,East,Standard,57.49,10,Annual,UPI,2,No,
+C042,Jupiter Shop,West,Premium,105.49,35,Two-Year,Bank Transfer,0,No,
+C043,Kite Retail,South,Basic,29.49,3,Month-to-Month,Debit Card,5,Yes,Low usage
+C044,Lotus Store,North,Standard,61.49,16,Annual,Credit Card,1,No,
+C045,Maple Mart,East,Premium,99.49,24,Two-Year,Credit Card,1,No,
+C046,Nova Retail,West,Basic,26.49,2,Month-to-Month,UPI,6,Yes,High price
+C047,Orchid Store,South,Standard,58.49,11,Annual,Bank Transfer,2,No,
+C048,Pearl Supplies,North,Premium,102.49,33,Two-Year,Credit Card,0,No,
+C049,Quartz Shop,East,Basic,30.49,5,Month-to-Month,Debit Card,4,Yes,Poor support
+C050,River Mart,West,Standard,63.49,18,Annual,Credit Card,1,No,
