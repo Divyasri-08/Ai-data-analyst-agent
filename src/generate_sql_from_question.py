@@ -6,7 +6,7 @@ import pandas as pd
 from dotenv import load_dotenv
 from openai import OpenAI
 from sqlalchemy import create_engine
-
+from validate_generated_sql import validate_sql
 
 load_dotenv()
 
@@ -99,9 +99,13 @@ if __name__ == "__main__":
     print("\nGenerated SQL:")
     print(generated_sql)
 
-    if not is_safe_select_query(generated_sql):
-        print("\nThe generated response is not a safe SQL SELECT query.")
-        print("Please rephrase the question using available columns from the schema.")
-    else:
-        output_file_name = input("\nEnter output file name without .csv: ")
-        save_query_output(generated_sql, output_file_name)
+    is_valid, validation_message = validate_sql(generated_sql)
+
+if not is_valid:
+    print("\nSQL validation failed.")
+    print(validation_message)
+    print("Please rephrase the question using available columns from the schema.")
+else:
+    print("\nSQL validation passed.")
+    output_file_name = input("\nEnter output file name without .csv: ")
+    save_query_output(generated_sql, output_file_name)
