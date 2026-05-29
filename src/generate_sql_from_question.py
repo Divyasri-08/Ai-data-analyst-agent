@@ -89,6 +89,17 @@ def save_query_output(sql_query, output_file_name):
     print(f"\nOutput saved to: {output_path}")
     print("\nQuery Result:")
     print(df)
+    
+def save_generated_sql(sql_query, output_file_name):
+    sql_folder = "generated_sql"
+    os.makedirs(sql_folder, exist_ok=True)
+
+    sql_path = f"{sql_folder}/{output_file_name}.sql"
+
+    with open(sql_path, "w", encoding="utf-8") as file:
+        file.write(sql_query)
+
+    print(f"Generated SQL saved to: {sql_path}")
 
 
 if __name__ == "__main__":
@@ -101,11 +112,14 @@ if __name__ == "__main__":
 
     is_valid, validation_message = validate_sql(generated_sql)
 
-if not is_valid:
-    print("\nSQL validation failed.")
-    print(validation_message)
-    print("Please rephrase the question using available columns from the schema.")
-else:
-    print("\nSQL validation passed.")
-    output_file_name = input("\nEnter output file name without .csv: ")
-    save_query_output(generated_sql, output_file_name)
+    if not is_valid:
+        print("\nSQL validation failed.")
+        print(validation_message)
+        print("Please rephrase the question using available columns from the schema.")
+    else:
+        print("\nSQL validation passed.")
+        output_file_name = input("\nEnter output file name without .csv: ")
+
+        save_generated_sql(generated_sql, output_file_name)
+        save_query_output(generated_sql, output_file_name)
+    
