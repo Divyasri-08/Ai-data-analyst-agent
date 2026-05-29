@@ -25,7 +25,7 @@ engine = create_engine(
 )
 
 # Create outputs folder if it does not exist
-OUTPUT_FOLDER = "outputs"
+OUTPUT_FOLDER = "outputs/version_1_predefined_sql"
 os.makedirs(OUTPUT_FOLDER, exist_ok=True)
 
 

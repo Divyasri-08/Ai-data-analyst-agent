@@ -1,0 +1,23 @@
+Database: ai_data_analyst_agent
+
+Table: customer_churn
+
+Columns:
+- customer_id: Unique customer ID
+- customer_name: Customer or account name
+- region: Customer region such as East, West, South, or North
+- subscription_plan: Customer subscription plan such as Basic, Standard, or Premium
+- monthly_charges: Monthly subscription charge amount
+- tenure_months: Number of months the customer has stayed with the company
+- contract_type: Type of contract such as Month-to-Month, Annual, or Two-Year
+- payment_method: Customer payment method
+- support_tickets: Number of support tickets raised by the customer
+- churn_status: Indicates whether the customer churned. Values are Yes or No
+- churn_reason: Reason why the customer left or cancelled the service. Use this column when the question asks for top churn reasons, reasons customers churn, why customers leave, or why customers cancel.
+
+Important:
+- The table contains one row per customer.
+- churn_status = 'Yes' means the customer churned.
+- churn_status = 'No' means the customer is still active.
+- churn_reason is only meaningful for customers where churn_status = 'Yes'.
+- monthly_charges, tenure_months, and support_tickets are numeric columns.

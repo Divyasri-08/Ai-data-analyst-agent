@@ -1,0 +1,9 @@
+What is the overall churn rate?
+Which region has the highest churn rate?
+Which subscription plan has the highest churn rate?
+What are the top reasons customers churn?
+What is the average monthly charge for churned and active customers?
+What is the average tenure for churned and active customers?
+Do customers with more support tickets churn more?
+Which contract type has the highest churn rate?
+Which payment method is associated with higher churn?
