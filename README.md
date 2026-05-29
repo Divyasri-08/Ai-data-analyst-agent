@@ -220,6 +220,43 @@ Natural-language question → AI-generated SQL → PostgreSQL execution → save
 
 At this stage, the project demonstrates both SQL automation and AI-assisted SQL generation.
 
+## Version 3: SQL Validation
+
+
+So the correct Version 3 section should look like this:
+
+````markdown
+## Version 3: SQL Validation
+
+In Version 3, SQL validation was added before executing AI-generated queries.
+
+Version 3 workflow:
+
+```text
+Business question → AI-generated SQL → SQL validation → PostgreSQL execution → saved output
+
+The validation step checks whether:
+
+- The generated response is a valid PostgreSQL SELECT query
+- Unsafe SQL commands such as INSERT, UPDATE, DELETE, DROP, ALTER, and TRUNCATE are blocked
+- The generated SQL uses only allowed table names
+- The generated SQL uses only valid columns from the `customer_churn` schema
+- Missing or hallucinated columns are detected before execution
+
+Example failed question:
+
+```text
+Which age group has the highest churn?
+```
+
+Since the dataset does not contain an `age_group` column, the system returns:
+
+```text
+COLUMN_NOT_FOUND: age_group
+```
+
+This prevents incorrect AI-generated SQL from running against the database.
+
 ## Security Note
 
 Database credentials and API keys are stored in a local `.env` file and are not pushed to GitHub.
