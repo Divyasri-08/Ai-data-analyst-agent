@@ -47,6 +47,10 @@ def validate_sql(sql_query):
 
     sql_lower = sql_query.lower().strip()
 
+# Remove string values inside quotes before checking identifiers.
+# Example: WHERE region = 'East' should not treat East as a column name.
+    sql_without_strings = re.sub(r"'[^']*'", "", sql_lower)
+
     if sql_query == "QUESTION_NOT_CLEAR":
         return False, "Question is unclear. Please rephrase the question."
 
@@ -66,7 +70,7 @@ def validate_sql(sql_query):
         if table not in VALID_TABLES:
             return False, f"TABLE_NOT_FOUND: {table}"
 
-    possible_identifiers = re.findall(r"\b[a-zA-Z_][a-zA-Z0-9_]*\b", sql_lower)
+    possible_identifiers = re.findall(r"\b[a-zA-Z_][a-zA-Z0-9_]*\b", sql_without_strings)
 
     allowed_words = set(VALID_COLUMNS + VALID_TABLES + SQL_KEYWORDS_AND_FUNCTIONS)
 

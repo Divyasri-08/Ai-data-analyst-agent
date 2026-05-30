@@ -58,7 +58,6 @@ Business Question:
 
 def is_safe_select_query(sql_query):
     sql_lower = sql_query.lower().strip()
-
     blocked_keywords = [
         "insert", "update", "delete", "drop", "alter",
         "truncate", "create", "grant", "revoke"
@@ -101,9 +100,15 @@ def save_generated_sql(sql_query, output_file_name):
 
     print(f"Generated SQL saved to: {sql_path}")
 
-
-if __name__ == "__main__":
-    question = input("Enter your business question: ")
+def run_ai_analysis(question, output_file_name):
+    """
+    Runs the full AI data analyst workflow:
+    1. Generate SQL from business question
+    2. Validate generated SQL
+    3. Save generated SQL as .sql file
+    4. Execute SQL in PostgreSQL
+    5. Save query output as CSV
+    """
 
     generated_sql = generate_sql(question)
 
@@ -115,11 +120,37 @@ if __name__ == "__main__":
     if not is_valid:
         print("\nSQL validation failed.")
         print(validation_message)
+
+        return {
+            "status": "failed",
+            "question": question,
+            "generated_sql": generated_sql,
+            "validation_message": validation_message
+        }
+
+    print("\nSQL validation passed.")
+
+    save_generated_sql(generated_sql, output_file_name)
+    save_query_output(generated_sql, output_file_name)
+
+    return {
+        "status": "success",
+        "question": question,
+        "generated_sql": generated_sql,
+        "sql_file": f"generated_sql/{output_file_name}.sql",
+        "output_file": f"outputs/version_2_ai_generated_sql/{output_file_name}.csv"
+    }
+
+if __name__ == "__main__":
+    question = input("Enter your business question: ")
+    output_file_name = input("\nEnter output file name without .csv: ")
+
+    result = run_ai_analysis(question, output_file_name)
+
+    if result["status"] == "failed":
         print("Please rephrase the question using available columns from the schema.")
     else:
-        print("\nSQL validation passed.")
-        output_file_name = input("\nEnter output file name without .csv: ")
-
-        save_generated_sql(generated_sql, output_file_name)
-        save_query_output(generated_sql, output_file_name)
+        print("\nAI analysis completed successfully.")
+        print(f"SQL file: {result['sql_file']}")
+        print(f"Output file: {result['output_file']}")
     
